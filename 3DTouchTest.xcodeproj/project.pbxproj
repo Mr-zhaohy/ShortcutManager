@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D06C40D1F9ED17500C1F988 /* UIViewController+Preview.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D06C40C1F9ED17500C1F988 /* UIViewController+Preview.m */; };
+		0D8721C71FA083BC005A8C18 /* RD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D8721C61FA083BC005A8C18 /* RD@2x.png */; };
 		0DED96ED1F9CC98300BDA0C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DED96EC1F9CC98300BDA0C2 /* AppDelegate.m */; };
 		0DED96F01F9CC98300BDA0C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DED96EF1F9CC98300BDA0C2 /* ViewController.m */; };
 		0DED96F31F9CC98300BDA0C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DED96F11F9CC98300BDA0C2 /* Main.storyboard */; };
@@ -17,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D06C40B1F9ED17500C1F988 /* UIViewController+Preview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Preview.h"; sourceTree = "<group>"; };
+		0D06C40C1F9ED17500C1F988 /* UIViewController+Preview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Preview.m"; sourceTree = "<group>"; };
+		0D8721C61FA083BC005A8C18 /* RD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RD@2x.png"; sourceTree = "<group>"; };
 		0DED96E81F9CC98300BDA0C2 /* 3DTouchTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3DTouchTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DED96EB1F9CC98300BDA0C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0DED96EC1F9CC98300BDA0C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -65,6 +70,9 @@
 				0DED96EC1F9CC98300BDA0C2 /* AppDelegate.m */,
 				0DED96EE1F9CC98300BDA0C2 /* ViewController.h */,
 				0DED96EF1F9CC98300BDA0C2 /* ViewController.m */,
+				0D8721C61FA083BC005A8C18 /* RD@2x.png */,
+				0D06C40B1F9ED17500C1F988 /* UIViewController+Preview.h */,
+				0D06C40C1F9ED17500C1F988 /* UIViewController+Preview.m */,
 				0DED97011F9CCA8200BDA0C2 /* ShortcutManager.h */,
 				0DED97021F9CCA8200BDA0C2 /* ShortcutManager.m */,
 				0DED96F11F9CC98300BDA0C2 /* Main.storyboard */,
@@ -137,6 +145,7 @@
 				0DED96F81F9CC98300BDA0C2 /* LaunchScreen.storyboard in Resources */,
 				0DED96F51F9CC98300BDA0C2 /* Assets.xcassets in Resources */,
 				0DED96F31F9CC98300BDA0C2 /* Main.storyboard in Resources */,
+				0D8721C71FA083BC005A8C18 /* RD@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +160,7 @@
 				0DED96FB1F9CC98300BDA0C2 /* main.m in Sources */,
 				0DED96ED1F9CC98300BDA0C2 /* AppDelegate.m in Sources */,
 				0DED97031F9CCA8200BDA0C2 /* ShortcutManager.m in Sources */,
+				0D06C40D1F9ED17500C1F988 /* UIViewController+Preview.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +297,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VZ2673TTD2;
 				INFOPLIST_FILE = 3DTouchTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.erongdu.-DTouchTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -301,6 +312,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VZ2673TTD2;
 				INFOPLIST_FILE = 3DTouchTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.erongdu.-DTouchTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
