@@ -34,13 +34,13 @@
     UIViewController *vc = [[UIViewController alloc]init];
     if (control == _btn) {
         vc.view.backgroundColor = [UIColor redColor];
-        vc.actionItems = @[[UIPreviewAction actionWithTitle:@"图片" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        vc.actionItems = @[[UIPreviewAction actionWithTitle:@"按钮" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
         }]];
         return vc;
     }
     else if ([control isEqual:_imageView]){
         vc.view.backgroundColor = [UIColor blueColor];
-        vc.actionItems = @[[UIPreviewAction actionWithTitle:@"按钮" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
+        vc.actionItems = @[[UIPreviewAction actionWithTitle:@"图片" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
         }]];
         return vc;
     }
