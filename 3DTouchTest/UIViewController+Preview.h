@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+
 NS_CLASS_AVAILABLE_IOS(9_0)
+/**
+ 系统版本需≥9.0,且需要硬件支持3D Touch.
+ */
 @interface UIViewController (Preview)<UIViewControllerPreviewingDelegate>
 /**
  设置可响应的控件
