@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "UIViewController+Preview.h"
+#import "SourceViewController.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UIButton *btn;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -31,7 +32,7 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 -(UIViewController *)previewingOfControl:(UIControl *)control indexPath:(NSIndexPath *)indexPath{
-    UIViewController *vc = [[UIViewController alloc]init];
+    SourceViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"secondVC"];
     if (control == _btn) {
         vc.view.backgroundColor = [UIColor redColor];
         vc.actionItems = @[[UIPreviewAction actionWithTitle:@"按钮" style:UIPreviewActionStyleDefault handler:^(UIPreviewAction * _Nonnull action, UIViewController * _Nonnull previewViewController) {
@@ -62,7 +63,7 @@
     return nil;
 }
 -(void)putviewingWithCommitViewController:(UIViewController *)viewControllerToCommit{
-    
+    [self.navigationController pushViewController:viewControllerToCommit animated:YES];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 5;

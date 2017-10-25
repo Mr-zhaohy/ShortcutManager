@@ -43,4 +43,17 @@ NS_CLASS_AVAILABLE_IOS(9_0)
  */
 -(void)putviewingWithCommitViewController:(UIViewController *)viewControllerToCommit;
 
+/**
+ 目标VC预览状态
+
+ @param vc 源VC
+ */
+-(void)previewingWithViewController:(UIViewController *)vc;
+/**
+ 进入目标VC
+ 
+ @param vc 源VC
+ */
+-(void)intoWithViewController:(UIViewController *)vc;
+
 @end

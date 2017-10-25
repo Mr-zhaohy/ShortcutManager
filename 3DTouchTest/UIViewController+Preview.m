@@ -24,21 +24,34 @@ static char kAssociatedCurrentIndexPathKey;
         if (CGRectContainsPoint(tmpControl.frame, location)) {
             control = tmpControl;
             if ([tmpControl isKindOfClass:[UITableView class]]) {
+                //如果是tableView，则查找indexPath
                 UITableView *tmpTableView = (UITableView *)tmpControl;
                 CGPoint p = [tmpTableView convertPoint:location fromView:previewingContext.sourceView];
                 /** 通过坐标获得当前cell的indexPath */
                 indexPath = [tmpTableView indexPathForRowAtPoint:p];
+                UITableViewCell *cell = [tmpTableView cellForRowAtIndexPath:indexPath];
+                //招待cell的位置，并设置高亮区
+                CGFloat x = tmpTableView.frame.origin.x + cell.frame.origin.x;
+                CGFloat y = tmpTableView.frame.origin.y + cell.frame.origin.y;
+                previewingContext.sourceRect = CGRectMake(x, y, cell.frame.size.width, cell.frame.size.height);
+            }
+            else{
+                //设置高亮区
+                previewingContext.sourceRect = tmpControl.frame;
             }
         }
     }
     
     objc_setAssociatedObject(self, &kAssociatedCurentControlKey, control, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     objc_setAssociatedObject(self, &kAssociatedCurrentIndexPathKey, indexPath, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    
-    return [self previewingOfControl:control indexPath:indexPath];
+    UIViewController *tmpVC = [self previewingOfControl:control indexPath:indexPath];
+    [tmpVC previewingWithViewController:self];
+    return tmpVC;
 }
 -(void)previewingContext:(id<UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit{
     [self putviewingWithCommitViewController:viewControllerToCommit];
+    [viewControllerToCommit intoWithViewController:self];
+
 }
 
 -(NSMutableArray<UIControl *> *)sourceControls{
@@ -73,6 +86,12 @@ static char kAssociatedCurrentIndexPathKey;
     return nil;
 }
 -(void)putviewingWithCommitViewController:(UIViewController *)viewControllerToCommit{
-    
+    // do someting
+}
+-(void)previewingWithViewController:(UIViewController *)vc{
+    // do someting
+}
+-(void)intoWithViewController:(UIViewController *)vc{
+    // do someting
 }
 @end
